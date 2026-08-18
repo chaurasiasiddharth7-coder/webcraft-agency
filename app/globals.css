@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  --ink: #0b1220;
+  --ink-2: #121a2b;
+  --slate: #8b98b0;
+  --signal: #c8f542;
+  --signal-ink: #142000;
+  --line: rgba(255, 255, 255, 0.1);
+  --background: var(--ink);
+  --foreground: #eef2f8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-signal: var(--signal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: Syne, "Plus Jakarta Sans", sans-serif;
+}
+
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 70% 55% at 78% 28%, rgba(200, 245, 66, 0.16), transparent 58%),
+    linear-gradient(165deg, #0b1220 0%, #0e1524 50%, #080e18 100%);
+}
+
+@keyframes oa-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.oa-rise {
+  animation: oa-rise 0.42s ease-out both;
+}
+
+.oa-rise-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.oa-rise-delay-2 {
+  animation-delay: 0.16s;
+}
