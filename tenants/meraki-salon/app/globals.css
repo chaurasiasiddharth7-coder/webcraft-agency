@@ -95,9 +95,15 @@ summary:focus-visible {
 
 .hero-still {
   transform: scale(1);
-  transform-origin: 62% 40%;
+  transform-origin: 70% 40%;
   animation: kenburns 22s var(--ease-meraki) both;
   will-change: transform;
+}
+
+@media (min-width: 768px) {
+  .hero-still {
+    mask-image: linear-gradient(90deg, transparent 0%, #000 16%);
+  }
 }
 
 .hero-grain {

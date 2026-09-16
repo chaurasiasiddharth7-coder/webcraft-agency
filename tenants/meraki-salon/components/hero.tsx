@@ -13,14 +13,14 @@ export function Hero() {
         {/* eslint-disable-next-line @next/next/no-img-element -- local SVG still; Ken Burns is CSS scale-only */}
         <img
           alt="Daylight color house interior, local demo still"
-          className="hero-still h-full w-full object-cover"
+          className="hero-still pointer-events-none absolute inset-y-0 right-0 h-full w-full object-cover object-[70%_40%] md:w-[62%]"
           fetchPriority="high"
           src="/hero-still.svg"
         />
         <div aria-hidden className="hero-grain" />
         <div
           aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(90deg,var(--void)_0%,rgba(10,10,11,0.72)_34%,rgba(10,10,11,0.08)_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,var(--void)_0%,var(--void)_38%,rgba(10,10,11,0.55)_50%,rgba(10,10,11,0)_68%)]"
         />
       </div>
 
