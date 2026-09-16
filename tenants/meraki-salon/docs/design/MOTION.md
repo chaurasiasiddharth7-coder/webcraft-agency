@@ -1,6 +1,6 @@
 # Motion storyboard — Meraki Salon
 
-Companion to `/workspace/meraki-salon/DESIGN.md`. Board-directed Path A start (2026-09-17).
+Companion to `tenants/meraki-salon/DESIGN.md` (relative: `../../DESIGN.md`). Board-directed Path A start (2026-09-17).
 
 One easing site-wide: `cubic-bezier(0.22, 1, 0.36, 1)`.
 

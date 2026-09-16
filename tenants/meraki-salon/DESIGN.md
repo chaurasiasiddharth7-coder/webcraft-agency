@@ -149,9 +149,9 @@ Default both **minimal** and **unique** until Board names one lane in the same m
 | Minimal | CSS/GSAP hero rise + soft Ken Burns on a **local** still. No WebGL. |
 | Unique | Same CTA pair static. Optional R3F atmosphere on home only (accent particles on void; no photos in Canvas). |
 
-## Site Builder handoff path (box SoT until Mac/repo sync)
+## Source of truth
 
-- `/workspace/meraki-salon/DESIGN.md`
-- `/workspace/meraki-salon/docs/design/MOTION.md`
+After merge, SoT is the repo:
 
-PR target: `tenants/meraki-salon/DESIGN.md` + `tenants/meraki-salon/docs/design/MOTION.md`.
+- `tenants/meraki-salon/DESIGN.md`
+- `tenants/meraki-salon/docs/design/MOTION.md`
