@@ -20,7 +20,7 @@ export function Hero() {
         <div aria-hidden className="hero-grain" />
         <div
           aria-hidden
-          className="absolute inset-0 bg-[linear-gradient(90deg,var(--void)_0%,rgba(10,10,11,0.82)_42%,rgba(10,10,11,0.28)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(90deg,var(--void)_0%,rgba(10,10,11,0.72)_34%,rgba(10,10,11,0.08)_100%)]"
         />
       </div>
 
