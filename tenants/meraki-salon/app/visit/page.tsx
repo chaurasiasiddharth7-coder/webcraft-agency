@@ -34,15 +34,18 @@ export default function VisitPage() {
             </p>
             <CtaPair className="mt-8" />
           </div>
-          <div
-            aria-label="Map embed placeholder"
-            className="flex min-h-[280px] items-end rounded-[24px] border border-[var(--line)] bg-[var(--bone)]/4 p-6"
+          <section
+            aria-labelledby="visit-map-heading"
+            className="flex min-h-[280px] flex-col justify-end rounded-[24px] border border-[var(--line)] bg-[var(--bone)]/4 p-6"
           >
-            <p className="max-w-[36ch] text-sm text-[var(--muted)]">
+            <h2 id="visit-map-heading" className="font-label text-[12px] tracking-[0.12em] text-[var(--muted)]">
+              Map
+            </h2>
+            <p className="mt-3 max-w-[36ch] text-sm text-[var(--muted)]">
               Map embed placeholder — South Congress / Austin (demo). No third-party tile until the
               address is real.
             </p>
-          </div>
+          </section>
         </div>
       </section>
     </SiteShell>

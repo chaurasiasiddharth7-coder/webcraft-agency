@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { CtaPair } from "@/components/cta-pair"
 import { SectionHead } from "@/components/section-head"
 import { ServiceCard } from "@/components/service-card"
 import { SiteShell } from "@/components/site-shell"
@@ -24,6 +25,7 @@ export default function ServicesPage() {
               </li>
             ))}
           </ul>
+          <CtaPair className="mt-12" />
         </div>
       </section>
     </SiteShell>

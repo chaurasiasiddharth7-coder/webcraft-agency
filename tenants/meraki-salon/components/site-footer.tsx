@@ -18,8 +18,12 @@ export function SiteFooter() {
           <a className="hover:text-[var(--ink)]" href={BOOK_URL} rel="noopener noreferrer">
             Book
           </a>
-          <span>Privacy</span>
-          <span>Terms</span>
+          <Link className="hover:text-[var(--ink)]" href="/privacy">
+            Privacy
+          </Link>
+          <Link className="hover:text-[var(--ink)]" href="/terms">
+            Terms
+          </Link>
         </nav>
       </div>
     </footer>

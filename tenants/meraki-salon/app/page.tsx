@@ -21,7 +21,7 @@ export default function HomePage() {
 
       <section className="px-6 py-[var(--section)] md:px-[6%] lg:px-8">
         <div className="mx-auto max-w-[1200px]">
-          <SectionHead kicker="Menu" title="Honest ranges. No hero grid.">
+          <SectionHead as="h2" kicker="Menu" title="Honest ranges. No hero grid.">
             <p>Color, cut, treatment, event. Prices are ranges so the consult can stay honest.</p>
           </SectionHead>
           <ul className="mt-12 grid gap-4 md:grid-cols-2">
@@ -41,7 +41,7 @@ export default function HomePage() {
 
       <section className="border-t border-[var(--line)] px-6 py-[var(--section)] md:px-[6%] lg:px-8">
         <div className="mx-auto max-w-[1200px]">
-          <SectionHead kicker="Book" title="The chair is the product.">
+          <SectionHead as="h2" kicker="Book" title="The chair is the product.">
             <p>Pick a time, or call the desk. Demo booking link — replace on closed_won.</p>
           </SectionHead>
           <CtaPair className="mt-8" />

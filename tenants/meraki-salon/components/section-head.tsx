@@ -6,11 +6,13 @@ import { MERAKI_EASE_GSAP } from "@/lib/motion"
 type SectionHeadProps = {
   kicker?: string
   title: string
+  as?: "h1" | "h2"
   children?: React.ReactNode
 }
 
-export function SectionHead({ kicker, title, children }: SectionHeadProps) {
+export function SectionHead({ kicker, title, as = "h1", children }: SectionHeadProps) {
   const ref = useRef<HTMLDivElement>(null)
+  const Heading = as
 
   useEffect(() => {
     const el = ref.current
@@ -57,9 +59,9 @@ export function SectionHead({ kicker, title, children }: SectionHeadProps) {
       {kicker ? (
         <p className="font-label text-[12px] tracking-[0.12em] text-[var(--muted)]">{kicker}</p>
       ) : null}
-      <h2 className="mt-3 font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[0.94] tracking-[-0.04em] text-[var(--ink)]">
+      <Heading className="mt-3 font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[0.94] tracking-[-0.04em] text-[var(--ink)]">
         {title}
-      </h2>
+      </Heading>
       {children ? <div className="mt-4 text-[var(--muted)]">{children}</div> : null}
     </div>
   )

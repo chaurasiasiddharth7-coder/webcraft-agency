@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { CtaPair } from "@/components/cta-pair"
 import { SectionHead } from "@/components/section-head"
 import { SiteShell } from "@/components/site-shell"
 import { CITIES } from "@/lib/facts"
@@ -28,6 +29,7 @@ export default function AboutPage() {
               invent a reason.
             </p>
           </div>
+          <CtaPair className="mt-12" />
         </div>
       </section>
     </SiteShell>
