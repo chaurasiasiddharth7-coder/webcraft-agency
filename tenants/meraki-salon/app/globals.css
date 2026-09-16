@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root {
+  --void: #0a0a0b;
+  --bone: #f7f4f1;
+  --ink: #f4f1ec;
+  --muted: #a39e97;
+  --line: rgba(244, 241, 236, 0.12);
+  --accent: #e8a4b8;
+  --accent-deep: #c47a92;
+  --on-accent: #1a1014;
+  --section: 96px;
+  --ease-meraki: cubic-bezier(0.22, 1, 0.36, 1);
+  --font-display: Fraunces, Georgia, serif;
+  --font-body: Manrope, system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-void: var(--void);
+  --color-bone: var(--bone);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--void);
+}
+
+body {
+  background: var(--void);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.font-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 50;
+  border-radius: 9999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 0.75rem 1.25rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background-color 200ms var(--ease-meraki), color 200ms var(--ease-meraki),
+    border-color 200ms var(--ease-meraki);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--accent-deep);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  border-color: rgba(244, 241, 236, 0.32);
+}
+
+[data-hero-rise] {
+  transform: translateY(16px);
+}
+
+.hero-still {
+  transform: scale(1);
+  transform-origin: 62% 40%;
+  animation: kenburns 22s var(--ease-meraki) both;
+  will-change: transform;
+}
+
+.hero-grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("/grain.svg");
+  background-size: 180px 180px;
+}
+
+.service-card {
+  transition: transform 500ms var(--ease-meraki), border-color 500ms var(--ease-meraki);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 241, 236, 0.28);
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-still {
+    animation: none;
+  }
+
+  [data-hero-rise] {
+    transform: none;
+  }
+
+  .service-card {
+    transition: border-color 200ms var(--ease-meraki), color 200ms var(--ease-meraki);
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+}
